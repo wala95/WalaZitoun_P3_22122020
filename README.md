@@ -10,11 +10,13 @@ https://wala95.github.io/WalaZitoun_P3_22122020/
 
 ## Maquettes
 
-Accueil:
+- Accueil:
+
 <img src="images/maquettes/Accueil.png">
 
-Menu:
-<img src="images/maquettes/Menu-Àlafrançaise.png">
+- Menu:
+
+<img src="images/maquettes/Menu-Àlafrançaise.png" >
 
 ## Cahier des charges
 
