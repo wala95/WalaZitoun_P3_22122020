@@ -14,7 +14,7 @@ Accueil:
 <img src="images/maquettes/Accueil.png">
 
 Menu:
-<img src="images/maquette/Menu-Àlafrançaise.png">
+<img src="images/maquettes/Menu-Àlafrançaise.png">
 
 ## Cahier des charges
 
