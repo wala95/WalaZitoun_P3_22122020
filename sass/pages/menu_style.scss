@@ -1,0 +1,192 @@
+@import "../utils/variable.scss";
+@import "../utils/mixins.scss";
+@import "../base/font.scss";
+@import "../layout/footer.scss";
+@import "../composants/boutton.scss";
+@import "../composants/ancre.scss";
+
+@keyframes apparaition {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20%);
+    }
+    50% {
+        opacity: 0;   
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 14px;
+    font-family: 'Roboto';
+    margin: 0;
+    background-color: #f6f6f6;
+    header {
+        .barre_logo {
+            display: grid;
+            grid-template-columns: 1fr 12fr;
+            justify-items: center;
+            align-items:center;
+            height: 16vw;
+            i {
+                padding-left: 5vw;
+                font-size: 20px;
+            }
+            .logo {   
+                width: 50vw;
+                height: 7vw;
+            }
+        }
+        .photo_resto {
+            width: 100vw;
+        }
+    }
+    main {
+        section {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin-bottom: 0px;
+            padding: 10px 13px 30px 13px;
+            border-radius: 50px 50px 0 0;
+            background-color: #f6f6f6;
+            position: relative;
+            transform: translate(0, -5%);
+            h1 {
+                font-size: 30px;
+                font-weight: 900;
+                font-style: italic;
+                padding-left: 7px;
+                margin-bottom: 0;
+            }
+            .articles{
+                article {
+                    animation: apparaition 3s linear 1;
+                    &:nth-child(1){
+                        animation-duration: 1.0s;
+                    }
+                    &:nth-child(2){
+                        animation-duration: 2s;
+                    }
+                    &:nth-child(3){
+                        animation-duration: 3s;
+                    }
+                }
+                h2{
+                    color: #919191;     
+                    padding-left: 7px; 
+                    margin-top: 40px;
+                    font-weight: 1;     
+                }
+                .sous_ligne {
+                    width: 50px;
+                    border-top: 3px $Tertiaire solid;
+                    position: relative;
+                    transform: translate(10%, -400%);
+                }
+                .menu {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-gap: 20px;
+                    .coche {
+                        background-color: $Tertiaire;
+                        width: 60px;
+                        height: 70px;
+                        float: right;
+                        position: relative;
+                        transform: translate(117%, 0);
+                        transition: transform 1s;
+                        .check {
+                            color: white;
+                            font-size: 20px;
+                            margin-top: 40%;
+                            margin-left: 30%;
+                            transform: rotate(0deg);
+                            transition: transform 1s;
+                        }
+                    }
+                    .plat {
+                        @include plat;
+                        h3 {
+                            margin-top: 10px;
+                            margin-bottom: 0;
+                        }
+                        p{
+                            margin-top: 10px;
+                            margin-bottom: 0px;  
+                        }
+                        .prix { 
+                            float: right;
+                            position: relative;
+                            transform: translate(200%, -100%);  
+                            transition: transform 1s;
+                        }
+                        a:hover .coche {
+                            transform: translate(17%, 0%);
+                            
+                        }
+                        a:hover .prix {
+                            transform: translate(0%, -100%);
+                        }
+                        a:hover .check {
+                            transform: rotate(360deg);
+                        } 
+                        a:hover p {
+                            width: 60vw;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }  
+                    }
+                }
+            }
+            button { 
+                justify-self: center;
+                margin-top: 50px;
+                width: 50vw;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 770px) {
+    body{
+        header {
+            .photo_resto {
+                height: 60vh;
+            }
+        }
+        main {
+            section {
+                position: relative;
+                transform: translate(0, -8%);
+                article{
+                    max-width: 70vw;
+                    margin: auto;
+                }
+                button{
+                    width: 30vw;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 370px) {
+    body {
+        main {
+            article {
+                h3, p {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+
+            }
+        }
+    }
+}
+/*# sourceMappingURL=Menu_franc%CC%A7aise.scss.map */
