@@ -1,0 +1,43 @@
+footer {
+  color: white;
+  background-color: #323232;
+  padding: 8px 0 0px 25px;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+  padding-bottom: 12px;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer ul li a i {
+  margin-right: 10px;
+}
+
+footer ul li a .fa-hands-helping {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  footer h2 {
+    text-align: center;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    max-width: 80vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  footer ul li {
+    margin: 1vw 3vw 3vw 1vw;
+  }
+}

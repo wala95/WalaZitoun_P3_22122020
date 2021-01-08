@@ -130,12 +130,10 @@ body {
         .logo {
             display: flex;
             flex-direction: column;
-            height: 16vw;
+            height: 65px;
             justify-content: center;
             img {
-                width: 50vw;
-                height: 7vw;
-                align-self: center;   
+                height: 30px;  
             }
         }
     }
@@ -248,9 +246,17 @@ body {
 }
 @media screen and (min-width: 1000px) {
     body {
+        header {
+            .logo {
+                height: 130px;
+                img {
+                    height: 60px;  
+                }
+            }
+        }
         main {
             h2 {
-                margin-left: 4vw;
+                margin-left: 8vw;
             }
             .Fonctionnement {
                 .block_fonctionnement {
@@ -270,7 +276,7 @@ body {
             }
             .restaurants {
                 .articles {
-                    max-width: 50vw;
+                    max-width: 60vw;
                     margin: auto;
 
                 }

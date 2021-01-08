@@ -48,7 +48,7 @@ footer ul li a .fa-hands-helping {
   footer ul {
     display: flex;
     flex-direction: row;
-    max-width: 70vw;
+    max-width: 80vw;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -106,10 +106,10 @@ body {
 
 body header .barre_logo {
   display: grid;
-  grid-template-columns: 1fr 12fr;
+  grid-template-columns: 1fr 20fr;
   justify-items: center;
   align-items: center;
-  height: 16vw;
+  height: 65px;
 }
 
 body header .barre_logo i {
@@ -119,11 +119,13 @@ body header .barre_logo i {
 
 body header .barre_logo .logo {
   width: 50vw;
-  height: 7vw;
+  height: 30px;
 }
 
 body header .photo_resto {
+  object-fit: cover;
   width: 100vw;
+  height: 260px;
 }
 
 body main section {
@@ -165,7 +167,7 @@ body main section .articles h2 {
   color: #919191;
   padding-left: 7px;
   margin-top: 40px;
-  font-weight: 1;
+  font-weight: 100;
 }
 
 body main section .articles .sous_ligne {
@@ -225,19 +227,19 @@ body main section .articles .menu .plat .prix {
   transition: transform 1s;
 }
 
-body main section .articles .menu .plat a:hover .coche {
+body main section .articles .menu .plat:hover .coche {
   transform: translate(17%, 0%);
 }
 
-body main section .articles .menu .plat a:hover .prix {
+body main section .articles .menu .plat:hover .prix {
   transform: translate(0%, -100%);
 }
 
-body main section .articles .menu .plat a:hover .check {
+body main section .articles .menu .plat:hover .check {
   transform: rotate(360deg);
 }
 
-body main section .articles .menu .plat a:hover p {
+body main section .articles .menu .plat:hover p {
   width: 60vw;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -251,12 +253,21 @@ body main section button {
 }
 
 @media screen and (min-width: 770px) {
+  body header .barre_logo {
+    height: 130px;
+  }
+  body header .barre_logo .logo {
+    height: 60px;
+  }
   body header .photo_resto {
-    height: 60vh;
+    height: 350px;
   }
   body main section {
     position: relative;
     transform: translate(0, -8%);
+  }
+  body main section h1 {
+    margin-left: 13vw;
   }
   body main section article {
     max-width: 70vw;
