@@ -20,6 +20,10 @@ footer {
   padding: 8px 0 0px 25px;
 }
 
+footer h2 {
+  font-family: 'Shrikhand';
+}
+
 footer ul {
   padding: 0;
 }
@@ -368,34 +372,56 @@ body main .restaurants .articles article h3 {
 }
 
 body main .restaurants .articles article p {
-  margin: 10px 0 0px 15px;
+  margin: 10px 0 20px 15px;
 }
 
 body main .restaurants .articles article .like {
   float: right;
   position: relative;
-  transform: translate(-150%, -150%);
 }
 
-body main .restaurants .articles article .like .coeur_hover {
-  font-size: 17px;
-  z-index: 0;
+body main .restaurants .articles article .like .box-hidden {
+  background: #f0f0f0;
+}
+
+body main .restaurants .articles article .like .box-hidden {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  right: 20px;
+  bottom: 20px;
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+body main .restaurants .articles article .like .coeur_vide {
+  cursor: pointer;
+  font-size: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5;
+  overflow: hidden;
+}
+
+body main .restaurants .articles article .like .coeur_vide:hover {
+  transition: color 0.5s ease;
   color: transparent;
+}
+
+body main .restaurants .articles article .like .coeur_vide:hover + .box-hidden {
+  bottom: 50px;
+}
+
+body main .restaurants .articles article .like .coeur_plein {
+  font-size: 23px;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  border-radius: 0 0 50px 00px;
-  transform: rotate(225deg) Scale(0);
-  transition: transform 1s;
-}
-
-body main .restaurants .articles article .like .coeur {
-  font-size: 23.5px;
-  z-index: 1;
-  position: relative;
-  transform: translate(101%, 27.5%);
-}
-
-body main .restaurants .articles article .like .coeur:hover + .coeur_hover {
-  transform: rotate(225deg) scale(1);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @media screen and (min-width: 1000px) {

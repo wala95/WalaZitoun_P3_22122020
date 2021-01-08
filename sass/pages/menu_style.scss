@@ -66,6 +66,48 @@ body{
                 padding-left: 7px;
                 margin-bottom: 0;
             }
+            .like {
+                float: right;
+                position: relative;
+                .box-hidden {
+                background: lighten(#d6d6d6, 10%);
+                }
+                .box-hidden {
+                    position: absolute;
+                    width: 23px;
+                    height: 23px;
+                    left: 80vw;
+                    bottom: 5px;
+                    background: #f6f6f6;
+                    transition: all 0.3s ease;
+                    z-index: 2;
+                    }
+                .coeur_vide {
+                    cursor: pointer;
+                    font-size: 23px;
+                    position: absolute;
+                    left: 80vw;
+                    bottom: 5px;
+                    z-index: 5;
+                    overflow: hidden;
+                    &:hover {
+                        transition: color 0.5s ease;
+                        color: transparent;
+                    }
+                    &:hover + .box-hidden {
+                        bottom: 40px;
+                    }   
+                }
+                .coeur_plein {
+                    font-size: 23px;
+                    position: absolute;
+                    left: 80vw;
+                    bottom: 5px;
+                    background: linear-gradient(to bottom right, $Secondaire, $Primaire);
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }  
+            }
             .articles{
                 article {
                     animation: apparaition 3s linear 1;

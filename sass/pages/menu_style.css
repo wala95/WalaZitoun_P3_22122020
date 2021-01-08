@@ -20,6 +20,10 @@ footer {
   padding: 8px 0 0px 25px;
 }
 
+footer h2 {
+  font-family: 'Shrikhand';
+}
+
 footer ul {
   padding: 0;
 }
@@ -146,6 +150,55 @@ body main section h1 {
   font-style: italic;
   padding-left: 7px;
   margin-bottom: 0;
+}
+
+body main section .like {
+  float: right;
+  position: relative;
+}
+
+body main section .like .box-hidden {
+  background: #f0f0f0;
+}
+
+body main section .like .box-hidden {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 80vw;
+  bottom: 5px;
+  background: #f6f6f6;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+body main section .like .coeur_vide {
+  cursor: pointer;
+  font-size: 23px;
+  position: absolute;
+  left: 80vw;
+  bottom: 5px;
+  z-index: 5;
+  overflow: hidden;
+}
+
+body main section .like .coeur_vide:hover {
+  transition: color 0.5s ease;
+  color: transparent;
+}
+
+body main section .like .coeur_vide:hover + .box-hidden {
+  bottom: 40px;
+}
+
+body main section .like .coeur_plein {
+  font-size: 23px;
+  position: absolute;
+  left: 80vw;
+  bottom: 5px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 body main section .articles article {

@@ -215,30 +215,11 @@ body {
                         margin: 15px 0 0 15px;
                     }
                     p {
-                        margin: 10px 0 0px 15px;
+                        margin: 10px 0 20px 15px;
                     }
                     .like {
-                        float: right;
-                        position: relative;
-                        transform: translate(-150%, -150%);
-                        .coeur_hover {
-                            font-size: 17px;
-                            z-index: 0;
-                            color: transparent;
-                            background: linear-gradient(to bottom right, $Secondaire, $Primaire);
-                            border-radius: 0 0 50px 00px;
-                            transform: rotate(225deg) Scale(0);
-                            transition: transform 1s;   
-                        }
-                        .coeur {
-                            font-size: 23.5px;
-                            z-index: 1;
-                            position: relative;
-                            transform: translate(101%, 27.5%);
-                            &:hover + .coeur_hover {
-                                transform: rotate(225deg) scale(1);
-                            }
-                        }  
+                        @include coeur;
+                    
                     }
                 } 
             }   

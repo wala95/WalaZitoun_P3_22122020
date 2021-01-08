@@ -63,3 +63,46 @@
     transform: translate(-25%, -550%);
     
 }
+@mixin coeur {
+    float: right;
+    position: relative;
+    .box-hidden {
+    background: lighten(#d6d6d6, 10%);
+    }
+    .box-hidden {
+        position: absolute;
+        width: 23px;
+        height: 23px;
+        right: 20px;
+        bottom: 20px;
+        background: white;
+        transition: all 0.3s ease;
+        z-index: 2;
+        }
+    .coeur_vide {
+        cursor: pointer;
+        font-size: 23px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        z-index: 5;
+        overflow: hidden;
+        &:hover {
+            transition: color 0.5s ease;
+            color: transparent;
+        }
+        &:hover + .box-hidden {
+            bottom: 50px;
+        }   
+    }
+    .coeur_plein {
+        font-size: 23px;
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background: linear-gradient(to bottom right, $Secondaire, $Primaire);
+        -webkit-background-clip: text;
+        color: transparent;
+    }  
+}
+
